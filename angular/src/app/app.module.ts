@@ -5,23 +5,24 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from "@angular/router";
 
 import { AppComponent } from './app.component';
-import { AddContactComponent } from './add-contact/add-contact.component';
-import { ContactsComponent } from './contacts/contacts.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsService } from "../services/contacts.service";
+import { ContactsComponent } from "./contacts/contacts.component";
+import { NewContactComponent } from './new-contact/new-contact.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'new-contact', component: NewContactComponent },
   { path: '', redirectTo: '/about', pathMatch: 'full'}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddContactComponent,
+    AboutComponent,
     ContactsComponent,
-    AboutComponent
+    NewContactComponent
   ],
   imports: [
     BrowserModule,
