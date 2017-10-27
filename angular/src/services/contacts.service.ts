@@ -14,8 +14,25 @@ export class ContactsService {
       .map(response => response.json());
   }
 
+  getContact(id: number) {
+    return this.http.get('http://localhost:8080/contacts/'+id)
+      .map(response => response.json());
+  }
+
   saveContact(contact: Contact) {
     return this.http.post('http://localhost:8080/contacts', contact)
       .map(response => response.json());
   }
+
+  updateContact(contact: Contact) {
+    return this.http.put('http://localhost:8080/contacts/'+contact.id, contact)
+      .map(response => response.json());
+  }
+
+  deleteContact(id: number) {
+    return this.http.delete('http://localhost:8080/contacts/'+id)
+      .map(response => response.json());
+  }
+
+
 }

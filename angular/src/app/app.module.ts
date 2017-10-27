@@ -8,11 +8,14 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsService } from "../services/contacts.service";
 import { ContactsComponent } from "./contacts/contacts.component";
+import { EditContactComponent } from "./edit-contact/edit-contact.component";
 import { NewContactComponent } from './new-contact/new-contact.component';
+import { NouveauContactComponent } from './nouveau-contact/nouveau-contact.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'edit-contact/:id', component: EditContactComponent },
   { path: 'new-contact', component: NewContactComponent },
   { path: '', redirectTo: '/about', pathMatch: 'full'}
 ]
@@ -22,7 +25,9 @@ const routes: Routes = [
     AppComponent,
     AboutComponent,
     ContactsComponent,
-    NewContactComponent
+    EditContactComponent,
+    NewContactComponent,
+    NouveauContactComponent
   ],
   imports: [
     BrowserModule,

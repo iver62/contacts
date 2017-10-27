@@ -16,6 +16,12 @@
           <td>{{c.nom}}</td>
           <td>{{c.prenom}}</td>
           <td>{{c.email}}</td>
+          <td>
+            <a (click)="onEditContact(c.id)" class="clickable">Modifier</a>
+          </td>
+          <td>
+            <a (click)="onDeleteContact(c)" class="clickable">Supprimer</a>
+          </td>
         </tr>
       </table>
       <div class="container">
