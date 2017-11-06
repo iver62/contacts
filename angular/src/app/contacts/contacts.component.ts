@@ -17,7 +17,7 @@ export class ContactsComponent implements OnInit {
   size: number = 5;
   pages: Array<number>;
 
-  constructor(public http: Http, public contactsService: ContactsService, public router: Router) { }
+  constructor(public contactsService: ContactsService, public router: Router) { }
 
   ngOnInit() {
 
